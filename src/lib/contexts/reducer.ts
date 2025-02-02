@@ -19,6 +19,12 @@ export const initialState: State = {
   items: ITEMS,
 };
 
+const getFilteredItems = (searchValue: string, filterValue: number) => {
+  return ITEMS.filter((item) =>
+    item.label.toLowerCase().includes(searchValue),
+  ).filter((item) => Number(item.id) > filterValue);
+};
+
 export const AppReducer = (state: State, action: Actions) => {
   switch (action.type) {
     case ActionTypes.OPEN_MODAL:
@@ -39,15 +45,17 @@ export const AppReducer = (state: State, action: Actions) => {
       return state;
     }
     case ActionTypes.SET_SEARCH_VALUE: {
-      const filteredItems = ITEMS.filter((item) =>
-        item.label.toLowerCase().includes(action.payload.toLowerCase()),
+      const filteredItems = getFilteredItems(
+        action.payload.toLowerCase(),
+        Number(state.filter),
       );
 
       return { ...state, searchValue: action.payload, items: filteredItems };
     }
     case ActionTypes.SET_FILTER: {
-      const filteredItems = ITEMS.filter(
-        (item) => Number(item.id) > Number(action.payload),
+      const filteredItems = getFilteredItems(
+        state.searchValue.toLowerCase(),
+        Number(action.payload),
       );
 
       return { ...state, filter: action.payload, items: filteredItems };

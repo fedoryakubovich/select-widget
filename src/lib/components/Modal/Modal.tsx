@@ -23,7 +23,6 @@ export const Modal: FC<PropsWithChildren<ModalProps>> = ({
   open,
   ...props
 }) => {
-  console.log("lol");
   const dialogRef = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
