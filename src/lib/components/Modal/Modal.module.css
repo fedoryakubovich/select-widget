@@ -1,0 +1,25 @@
+.modal {
+  background-color: var(--modal-background-color);
+  padding: 20px;
+  width: 474px;
+  min-height: 511px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+}
+
+.modal::backdrop {
+  background-color: var(--modal-backdrop-color);
+}
+
+.modal + .backdrop {
+  background-color: var(--modal-backdrop-color);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+

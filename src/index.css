@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --white: #ffffff;
+  --primary: #393939;
+  --success: #519f03;
+  --danger: #9f2903;
+  --secondary: #585858;
+  --selected-item-background-color: #121212;
+  --divider-color: #ffffff80;
+  --modal-background-color: #373737;
+  --modal-backdrop-color: #00000080;
+  --select-color: #515151;
+  --checkbox-list-background-color: #141414;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}

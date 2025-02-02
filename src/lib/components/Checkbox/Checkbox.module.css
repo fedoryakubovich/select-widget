@@ -1,0 +1,17 @@
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 4px;
+}
+
+.checkboxLabel {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.06px;
+  color: var(--white);
+}
+
+.disabled {
+  opacity: 0.5;
+}

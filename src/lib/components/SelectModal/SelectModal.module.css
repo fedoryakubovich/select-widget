@@ -1,0 +1,35 @@
+.filtersWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.searchWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 15px;
+  align-items: center;
+}
+
+.searchInput {
+  height: 20px;
+  color: var(--select-color);
+}
+
+.checkboxListWrapper {
+  background-color: var(--checkbox-list-background-color);
+  max-height: 266px;
+  min-height: 200px;
+  overflow-y: auto;
+  padding-left: 8px;
+  height: 266px;
+  overflow: auto;
+  margin-top: 24px;
+}
+
+.selectedItemsWrapper {
+  margin-top: 20px;
+}
+

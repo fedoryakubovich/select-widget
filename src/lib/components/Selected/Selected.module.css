@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.selectedItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  background-color: var(--selected-item-background-color);
+  min-width: 142px;
+}
+
+.selectedItemLabel {
+  padding: 10px;
+}
+
+.selectedItemActions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.divider {
+  width: 1px;
+  height: 18px;
+  background-color: var(--divider-color);
+}
+
+.header.primary {
+  color: var(--secondary);
+}
+
+.header.secondary {
+  color: var(--white);
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
