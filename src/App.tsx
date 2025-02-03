@@ -1,5 +1,3 @@
-import { useCallback } from "react";
-
 import { Button } from "./lib/components/Button/Button";
 import { Selected } from "./lib/components/Selected/Selected";
 import { SelectModal } from "./lib/components/SelectModal/SelectModal";
