@@ -18,9 +18,9 @@ function App() {
     dispatch({ type: ActionTypes.REMOVE_ITEM, payload: id });
   };
 
-  const handleOpenModal = useCallback(() => {
+  const handleOpenModal = () => {
     dispatch({ type: ActionTypes.OPEN_MODAL });
-  }, [dispatch]);
+  };
 
   return (
     <>
