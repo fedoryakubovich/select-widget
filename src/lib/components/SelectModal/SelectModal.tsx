@@ -1,6 +1,7 @@
 import { useVirtualizer } from "@tanstack/react-virtual";
 import { ChangeEvent, useCallback, useEffect, useRef, useState } from "react";
 
+import { MAX_SELECTED_ITEMS } from "../../constants";
 import { ActionTypes } from "../../contexts/actions";
 import { useAppContext } from "../../contexts/useAppContext";
 import { Checkbox } from "../Checkbox/Checkbox";
@@ -52,7 +53,7 @@ export const SelectModal = () => {
     [addItem, removeItem],
   );
 
-  const isListDisabled = Object.keys(selected).length === 3;
+  const isListDisabled = Object.keys(selected).length === MAX_SELECTED_ITEMS;
 
   return (
     <Modal title="Select items" onClose={handleCloseModal} open={isOpenModal}>
